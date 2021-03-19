@@ -4,6 +4,8 @@ Challenge de Frontend para la empresa **Esto es** (https://www.estoes.me/) que c
 
 Se encuentra hecho con **Angular Material** (https://material.angular.io/) y **Angular CLI** (versión 11.0.4.), con un patrón de diseño **Lazyload**.
 
+> Su dirección web: https://esto-es-challenge.netlify.app/
+
 ## Abrirlo localmente
 
 Primero instalar Angular CLI:
