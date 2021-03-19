@@ -2,7 +2,7 @@
 
 Challenge de Frontend para la empresa **Esto es** (https://www.estoes.me/) que consiste en una plataforma que tiene como objetivo realizar la gestión de proyectos, pudiendose utilizar tanto en Desktop como en Mobile.
 
-<iframe src="https://drive.google.com/file/d/15h-y-Oj22dwwvBVoKK8nr_a11juGQFKq/preview" width="640" height="480"></iframe>
+![](https://drive.google.com/file/d/15h-y-Oj22dwwvBVoKK8nr_a11juGQFKq/view)
 
 Se encuentra hecho con **Angular Material** (https://material.angular.io/) y **Angular CLI** (versión 11.0.4.), con un patrón de diseño **Lazyload**.
 
