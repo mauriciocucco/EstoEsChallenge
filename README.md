@@ -1,27 +1,41 @@
-# Challenge
+# Challenge de _Esto es_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+Challenge de Frontend para la empresa **Esto es** (https://www.estoes.me/) que consiste en una plataforma que tiene como objetivo realizar la gestión de proyectos, pudiendose utilizar tanto en Desktop como en Mobile.
 
-## Development server
+Se encuentra hecho con **Angular Material** (https://material.angular.io/) y **Angular CLI** (versión 11.0.4.), con un patrón de diseño **Lazyload**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Abrirlo localmente
 
-## Code scaffolding
+Primero instalar Angular CLI:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+npm install -g @angular/cli json-server
+```
 
-## Build
+## Iniciar la aplicación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Primero se deben instalar las dependencias del proyecto con:
 
-## Running unit tests
+```bash
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Luego, con una consola distinta, posicionarse dentro de la carpeta "heroes-server" y escribir:
 
-## Running end-to-end tests
+```bash
+json-server --watch db.json
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+> Esta consola debe permanecer abierta para realizar las peticiones CRUD.
 
-## Further help
+Por último, para abrir la aplicación:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+ng serve -o
+```
+
+Abrirá la página en la siguiente URL: `http://localhost:4200/`.
+
+### Nota
+
+> La página se actualizará automáticamente al realizar cambios y guardar.
