@@ -1,0 +1,80 @@
+<mat-card>
+  <form [formGroup]="form" autocomplete="off">
+    <label for="project-name">Project Name</label>
+    <mat-form-field appearance="outline">
+      <input matInput id="project-name" formControlName="name" />
+      <mat-error *ngIf="noValidField('name')">{{
+        getErrorMessage("name")
+      }}</mat-error>
+    </mat-form-field>
+    <label for="description">Description</label>
+    <mat-form-field appearance="outline">
+      <input matInput id="description" formControlName="description" />
+      <mat-error *ngIf="noValidField('description')">{{
+        getErrorMessage("description")
+      }}</mat-error>
+    </mat-form-field>
+    <label for="manager">Select a manager</label>
+    <mat-form-field appearance="outline">
+      <mat-select
+        id="manager"
+        name="manager"
+        formControlName="manager"
+        placeholder="Select a person"
+      >
+        <mat-option *ngFor="let manager of managers" [value]="manager.id">
+          {{ manager.fullname }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="noValidField('manager')">{{
+        getErrorMessage("manager")
+      }}</mat-error>
+    </mat-form-field>
+    <label for="employee">Assigned to</label>
+    <mat-form-field appearance="outline">
+      <mat-select
+        id="employee"
+        name="employee"
+        formControlName="employee"
+        placeholder="Select a person"
+      >
+        <mat-option *ngFor="let employee of employees" [value]="employee.id">
+          {{ employee.fullname }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="noValidField('employee')">{{
+        getErrorMessage("employee")
+      }}</mat-error>
+    </mat-form-field>
+    <label for="status">Status</label>
+    <mat-form-field appearance="outline">
+      <mat-select id="status" name="status" formControlName="status">
+        <mat-option *ngFor="let item of status" [value]="item">
+          {{ item }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="noValidField('status')">{{
+        getErrorMessage("status")
+      }}</mat-error>
+    </mat-form-field>
+  </form>
+  <button
+    type="submit"
+    mat-raised-button
+    class="red-button"
+    (click)="createProject()"
+    *ngIf="section === 'add'; else editButton"
+  >
+    Create Project
+  </button>
+</mat-card>
+<ng-template #editButton>
+  <button
+    type="submit"
+    mat-raised-button
+    class="red-button"
+    (click)="editProject()"
+  >
+    Save Changes
+  </button>
+</ng-template>

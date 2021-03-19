@@ -1,0 +1,12 @@
+button {
+  color: grey;
+  margin-right: 10px;
+}
+mat-icon {
+  margin-right: 5px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

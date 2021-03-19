@@ -1,0 +1,8 @@
+.dialog {
+  display: block;
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}

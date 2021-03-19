@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #f0f2f5;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+app-form {
+  width: 70%;
+}
+mat-toolbar {
+  background-color: white !important;
+  border-bottom: 2px solid #ececec;
+}
+.red-button {
+  background-color: red;
+  color: white !important;
+  font-size: 17px;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+.container {
+  margin: 50px;
+  padding-bottom: 50px;
+}
+input {
+  margin-top: -1.0625em !important;
+  font-size: 17px !important;
+}
+div.mat-select-arrow-wrapper {
+  transform: translateY(0%) !important;
+}
+div.mat-form-field-infix {
+  padding: 0.3em 0 0.6em 0 !important;
+}
+
+@media screen and (max-width: 700px) {
+  h2 {
+    color: #544a4a;
+    font-size: 15px;
+    margin-bottom: unset !important;
+  }
+  app-form {
+    width: 1000%;
+  }
+  .container {
+    margin: 15px 0px;
+  }
+  #filter {
+    margin: 0px 15px;
+  }
+  button#add-button.mat-focus-indicator.mat-button.mat-button-base {
+    padding: 0px !important;
+    margin-left: unset !important;
+  }
+  .mat-menu-panel {
+    min-width: 190px !important;
+  }
+  button#add-button.mat-focus-indicator.mat-button.mat-button-base {
+    padding: 0px !important;
+    margin-left: unset !important;
+  }
+  div.mat-menu-content:not(:empty) {
+    padding: 0px !important;
+  }
+}

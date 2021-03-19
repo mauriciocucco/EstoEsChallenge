@@ -1,0 +1,50 @@
+<mat-toolbar>
+  <span>My Projects</span>
+  <span class="spacer"></span>
+  <button class="red-button" mat-raised-button routerLink="/projects/add">
+    <mat-icon>add</mat-icon>Add project
+  </button>
+</mat-toolbar>
+<div class="container">
+  <mat-form-field id="filter">
+    <mat-label>Filter</mat-label>
+    <input matInput placeholder="Project´s name" #filter />
+  </mat-form-field>
+  <div class="mat-card-div">
+    <mat-card
+      class="project"
+      *ngFor="let project of projects | filter: filter.value"
+    >
+      <div class="top-section">
+        <div class="main-description">
+          <h2>{{ project.name }}</h2>
+          <p class="date-p">
+            Creation date: {{ project.date | date: "short" }}
+          </p>
+        </div>
+        <span class="spacer"></span>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon id="menu-icon">more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button
+            id="mat-menu-first-button"
+            mat-menu-item
+            [routerLink]="['/projects/edit', project.id]"
+          >
+            <mat-icon>edit</mat-icon>
+            <span>Edit</span>
+          </button>
+          <button mat-menu-item (click)="delete(project.id, project.name)">
+            <mat-icon>delete_outline</mat-icon>
+            <span>Delete</span>
+          </button>
+        </mat-menu>
+      </div>
+      <div class="low-section">
+        <img [src]="project.manager | image" alt="Project´s lider" />
+        <p>{{ project.manager | name }}</p>
+      </div>
+    </mat-card>
+  </div>
+</div>
