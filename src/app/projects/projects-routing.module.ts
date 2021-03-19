@@ -11,10 +11,12 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'add', component: AddComponent },
       { path: 'edit/:id', component: EditComponent },
-      { path: '**', redirectTo: 'home' },
+      { path: '', pathMatch: 'full', redirectTo: 'home' },
+      { path: '**', pathMatch: 'full', redirectTo: 'home' },
     ],
   },
-  { path: '**', redirectTo: 'proyects' },
+  { path: '', pathMatch: 'full', redirectTo: '' },
+  { path: '**', pathMatch: 'full', redirectTo: '' },
 ];
 
 @NgModule({
