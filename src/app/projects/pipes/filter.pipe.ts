@@ -9,8 +9,11 @@ export class FilterPipe implements PipeTransform {
     if (!filter || !items) {
       return items;
     }
+
+    const patchFilter = filter.trim().toLowerCase();
+
     return items.filter((project) =>
-      project.name.toLowerCase().includes(filter)
+      project.name.toLowerCase().includes(patchFilter)
     );
   }
 }
