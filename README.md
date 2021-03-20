@@ -10,7 +10,7 @@ Se encuentra hecho con **Angular Material** (https://material.angular.io/) y **A
 
 ## Abrirlo localmente
 
-Primero instalar Angular CLI:
+Instalar Angular CLI:
 
 ```bash
 npm install -g @angular/cli json-server
@@ -18,20 +18,16 @@ npm install -g @angular/cli json-server
 
 ## Iniciar la aplicación
 
-Primero se deben instalar las dependencias del proyecto con:
+Instalar las dependencias del proyecto con:
 
 ```bash
 npm install
 ```
 
-Por último, para abrir la aplicación:
+Por último, para abrir la aplicación en el browser:
 
 ```bash
 ng serve -o
 ```
 
 Abrirá la página en la siguiente URL: `http://localhost:4200/`.
-
-### Nota
-
-> La página se actualizará automáticamente al realizar cambios y guardar.
