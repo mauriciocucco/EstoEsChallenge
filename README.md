@@ -24,14 +24,6 @@ Primero se deben instalar las dependencias del proyecto con:
 npm install
 ```
 
-Luego, con una consola distinta, posicionarse dentro de la carpeta "heroes-server" y escribir:
-
-```bash
-json-server --watch db.json
-```
-
-> Esta consola debe permanecer abierta para realizar las peticiones CRUD.
-
 Por último, para abrir la aplicación:
 
 ```bash
