@@ -50,4 +50,7 @@ div.mat-menu-content:not(:empty).ng-tns-c110-1 {
   #menu-icon {
     font-size: 35px;
   }
+  .filter-div {
+    padding: 0px 15px;
+  }
 }

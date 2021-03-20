@@ -25,6 +25,8 @@ mat-toolbar {
   flex: 1 1 auto;
 }
 .container {
+  display: flex;
+  flex-direction: column;
   margin: 50px;
   padding-bottom: 50px;
 }
@@ -46,26 +48,9 @@ div.mat-form-field-infix {
     margin-bottom: unset !important;
   }
   app-form {
-    width: 1000%;
+    width: 100%;
   }
   .container {
-    margin: 15px 0px;
-  }
-  #filter {
-    margin: 0px 15px;
-  }
-  button#add-button.mat-focus-indicator.mat-button.mat-button-base {
-    padding: 0px !important;
-    margin-left: unset !important;
-  }
-  .mat-menu-panel {
-    min-width: 190px !important;
-  }
-  button#add-button.mat-focus-indicator.mat-button.mat-button-base {
-    padding: 0px !important;
-    margin-left: unset !important;
-  }
-  div.mat-menu-content:not(:empty) {
-    padding: 0px !important;
+    margin: 15px 0px 50px 0px;
   }
 }
